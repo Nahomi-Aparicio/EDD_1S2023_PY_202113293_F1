@@ -3,11 +3,12 @@ package main
 import (
 	"fmt"
 
+	"proyecto.com/proyecti/PPila"
 	"proyecto.com/proyecti/administrador"
 	"proyecto.com/proyecti/colita"
 )
 
-func menusecion(espera *colita.Cola) {
+func menusecion(espera *colita.Cola, pila *PPila.PilaA) {
 	//ahora := time.Now()❤
 
 	var usuario string
@@ -21,7 +22,7 @@ func menusecion(espera *colita.Cola) {
 		fmt.Println("                      ❤ BIEVENIDO AL SISTEMA ❤                          ")
 		fmt.Println("")
 
-		administrador.Menuadmi(espera)
+		administrador.Menuadmi(espera, pila)
 
 		//menuadmi()
 		//fmt.Printf("Fecha y hora de ingreso: %s\n", ahora.Format("2006-01-02 15:04:05"))  ❤
@@ -37,6 +38,7 @@ func menusecion(espera *colita.Cola) {
 func Menu1() {
 	var opcion int
 	espera := &colita.Cola{}
+	pila := &PPila.PilaA{}
 	opcion = 0
 	for opcion != 2 {
 
@@ -51,20 +53,17 @@ func Menu1() {
 			fmt.Println("Iniciando sesion")
 			fmt.Println("")
 			fmt.Println("")
-			menusecion(espera)
+			menusecion(espera, pila)
 
 			// falta aqui para iniciar el sistema   go run main.go
 
 		case 2:
 			fmt.Println("Saliendo del sistema")
 
-		default:
-			fmt.Println("Opcion incorrecta")
-			fmt.Println("")
-
 		}
 
 	}
+
 }
 
 func main() {

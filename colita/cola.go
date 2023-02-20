@@ -11,10 +11,10 @@ type Cola struct {
 	size    int // para indicar e tamaño de la cola de ususarios
 }
 
-func (c *Cola) Agregar(carnet string, nombre string, contraseña string) {
+func (c *Cola) Agregar(carnet string, nombre string, Apellido string, contraseña string) {
 	fmt.Println("Agregando estudiante a la cola")
 	//creo un estudiante
-	nuevoEst := &estructura.Estudiante{Carnet: carnet, Nombre: nombre, Contraseña: contraseña}
+	nuevoEst := &estructura.Estudiante{Carnet: carnet, Nombre: nombre, Apellido: Apellido, Contraseña: contraseña}
 
 	//creo un nodo
 	nuevonodo := &NODOcola{Estudiante: nuevoEst, Siguiente: nil}
@@ -69,15 +69,6 @@ func (c *Cola) Eliminar() (*estructura.Estudiante, int) {
 func (c *Cola) Vacia() bool {
 	return c.primero == nil
 }
-
-
-
-
-
-
-
-
-
 
 /*func (c *Cola) Graph() {
 	file, err := os.Create("cola.dot")

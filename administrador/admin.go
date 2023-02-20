@@ -5,17 +5,19 @@ import (
 	"encoding/csv"
 	"fmt"
 	"os"
+	"time"
 
 	//"os"
 
+	"proyecto.com/proyecti/PPila"
 	"proyecto.com/proyecti/colita"
 )
 
-func Menuadmi(colita *colita.Cola) {
+func Menuadmi(colita *colita.Cola, pila *PPila.PilaA) {
 
 	var opcion int
 	validar := 0
-	var nom, cont string
+	var nom, cont, Ap string
 	var car string
 	for opcion != 5 {
 
@@ -50,11 +52,20 @@ func Menuadmi(colita *colita.Cola) {
 					fmt.Scanln(&validar)
 					switch validar {
 					case 1:
-						fmt.Println("Estudiante aceptado")
+						date := time.Now()
+						t := fmt.Sprintf("%02d/%02d/%02d      %02d:%02d     ", date.Day(), date.Month(), date.Year(), date.Hour(), date.Minute())
+
+						fmt.Println("SE ACEPTO AL ESTUDIANTE")
 						fmt.Println("")
+						pila.Push(t, "se acepto a el estudiante")
+
 					case 2:
-						fmt.Println("Estudiante rechazado")
+						date := time.Now()
+						t := fmt.Sprintf("%02d/%02d/%02d      %02d:%02d     ", date.Day(), date.Month(), date.Year(), date.Hour(), date.Minute())
+
+						fmt.Println("SE RECHAZO AL ESTUDIANTE")
 						fmt.Println("")
+						pila.Push(t, "se rechazo a el estudiante")
 					case 3:
 						fmt.Println("Regresando al menu principal")
 						fmt.Println("")
@@ -70,6 +81,7 @@ func Menuadmi(colita *colita.Cola) {
 					fmt.Println("❤                 NO HAY ESTUDIANTES PENDIENTES               ❤")
 					fmt.Println("")
 				}
+				pila.Print()
 
 			}
 
@@ -83,11 +95,13 @@ func Menuadmi(colita *colita.Cola) {
 
 			fmt.Println("❤ INGRESE NOMBRE: ")
 			fmt.Scanln(&nom)
+			fmt.Println("❤ INGRESE APELLIDO: ")
+			fmt.Scanln(&Ap)
 			fmt.Println("❤ INGRESE CARNE: ")
 			fmt.Scanln(&car)
 			fmt.Println("❤ INGRESE CONTRASEÑA	: ")
 			fmt.Scanln(&cont)
-			colita.Agregar(car, nom, cont)
+			colita.Agregar(car, nom, Ap, cont)
 
 			fmt.Println("")
 			fmt.Println("                              ❤ ESTUDIANTE REGISTRADO❤                               ")
@@ -128,7 +142,10 @@ func Cargamasiva(colita *colita.Cola) {
 	}
 	for _, registro := range registrar {
 		fmt.Println("")
-		colita.Agregar(registro[0], registro[1], registro[2])
+		//fmt.Println(registro[1])
+
+		colita.Agregar(registro[0], registro[1], registro[2], registro[3])
+
 	}
 
 }
