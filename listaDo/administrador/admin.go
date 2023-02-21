@@ -4,7 +4,9 @@ import (
 	//"encoding/csv"
 	"encoding/csv"
 	"fmt"
+	"io"
 	"os"
+	"strings"
 	"time"
 
 	//"os"
@@ -33,12 +35,16 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA) {
 		fmt.Scanln(&opcion)
 		switch opcion {
 		case 1:
-			validar = 0
-			for validar != 3 {
-				if !colita.Vacia() {
-					//colita.Graph()
-					temp, size := colita.Eliminar()
+			//colita.Graph1()
 
+			validar = 0
+
+			for validar != 3 {
+
+				if !colita.Vacia() {
+
+					temp, size := colita.Eliminar()
+					colita.Graph1()
 					fmt.Println("═══════════════════════ ESTUDIANTES PENDIENTES ═════════", size+1, "═════════")
 
 					fmt.Printf("Carnet: %s\n", temp.Carnet)
@@ -49,6 +55,7 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA) {
 					fmt.Println("❤                   3. REGRESAR                                                   ❤")
 					fmt.Println(" ═══════════════════════════════════════════════════════════════════════════════════")
 					fmt.Print("Elige una opcion: ")
+
 					fmt.Scanln(&validar)
 					switch validar {
 					case 1:
@@ -84,6 +91,7 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA) {
 				pila.Print()
 
 			}
+			pila.Graph()
 
 		case 2:
 			fmt.Println("Estudiantes del sistema")
@@ -135,16 +143,26 @@ func Cargamasiva(colita *colita.Cola) {
 	}
 
 	defer file.Close()
-	registrar, err := csv.NewReader(file).ReadAll()
-	if err != nil {
-		fmt.Println("Error al leer el archivo:", err)
+	registrar := csv.NewReader(file)
+	if _, err := registrar.Read(); err != nil {
+		fmt.Println(err)
 		return
 	}
-	for _, registro := range registrar {
-		fmt.Println("")
-		//fmt.Println(registro[1])
+	for {
+		// Leer una línea del archivo
+		row, err := registrar.Read()
+		if err != nil {
+			// Si hemos llegado al final del archivo, salir del bucle
+			if err == io.EOF {
+				break
+			}
+			// Si hay un error diferente, mostrarlo y salir del programa
+			fmt.Println(err)
+			return
+		}
+		words := strings.Split(strings.TrimSpace(row[1]), " ")
 
-		colita.Agregar(registro[0], registro[1], registro[2], registro[3])
+		colita.Agregar(row[0], words[0], words[1], row[2])
 
 	}
 

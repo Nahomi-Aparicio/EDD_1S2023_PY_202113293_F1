@@ -2,6 +2,9 @@ package colita
 
 import (
 	"fmt"
+	"os"
+	"os/exec"
+	"strconv"
 
 	"proyecto.com/proyecti/estructura"
 )
@@ -34,20 +37,6 @@ func (c *Cola) Agregar(carnet string, nombre string, Apellido string, contraseñ
 
 }
 
-// aqui imprimimos  yey
-func (c *Cola) Imprimir() {
-
-	//recorremos la cola
-	aux := c.primero
-	//verificamos que no este vacia
-	for aux != nil {
-		//imprimimos el nodo
-		aux.Estudiante.Mostrar()
-		//pasamos al siguiente nodo
-		aux = aux.Siguiente
-	}
-}
-
 func (c *Cola) Eliminar() (*estructura.Estudiante, int) {
 
 	//verificamos si la cola esta vacia
@@ -68,6 +57,49 @@ func (c *Cola) Eliminar() (*estructura.Estudiante, int) {
 
 func (c *Cola) Vacia() bool {
 	return c.primero == nil
+}
+
+func (c *Cola) Graph1() {
+	var graphipila1 string
+	c.size += 1
+	var e int
+	e = c.size
+
+	temp := c.primero
+
+	//var str string = strconv.Itoa(p.size2)
+
+	graphipila1 = "digraph G {\n"
+	graphipila1 += "rankdir=TB;\n"
+	graphipila1 += "node [shape=box];\n"
+	graphipila1 += "node [shape=record fontname=Arial]\n"
+	graphipila1 += "label = \"COLA DE ESTUDIANTES EN ESPERA\";\n"
+	for temp != nil {
+		graphipila1 += "N" + strconv.Itoa(c.size) + "[label=\"{" + temp.Estudiante.Nombre + "|" + temp.Estudiante.Apellido + "|" + temp.Estudiante.Carnet + "}\"];\n"
+		graphipila1 += "N" + strconv.Itoa(c.size) + "->" + "N" + strconv.Itoa(c.size-1) + ";\n"
+		temp = temp.Siguiente
+		c.size -= 1
+
+	}
+	c.size = e
+
+	graphipila1 += "}"
+	//fmt.Println(graphipila1)
+	file, or := os.Create("cola.dot")
+	if or != nil {
+		fmt.Println("Error al crear el archivo")
+		return
+	}
+	file.WriteString(graphipila1)
+	file.Close()
+	//creamos la imagen
+	cmd := exec.Command("dot", "-Tpng", "cola.dot", "-o", "cola.png")
+	arr := cmd.Run()
+	if arr != nil {
+		fmt.Println("Error al crear la imagen")
+		return
+	}
+
 }
 
 /*func (c *Cola) Graph() {
@@ -120,7 +152,36 @@ N1->N2;
 
 
 
+func (p *PilaA) Graph() {
+	p.size2 += 1
 
+	temp := p.head
+	//var str string = strconv.Itoa(p.size2)
+
+	fmt.Println(p.size2)
+	//var str string = strconv.Itoa(p.size2)
+	e := 1
+	graphipila1 := "digraph G {\n"
+	graphipila1 += "rankdir=LR;\n"
+	graphipila1 += "node [shape=box];\n"
+	graphipila1 += "node [shape=record fontname=Arial]\n"
+	graphipila1 += "label = \"Pila\";\n"
+	for temp != nil {
+		graphipila1 += "N" + strconv.Itoa(p.size2) + "[label=\"{" + temp.Estado + "|" + temp.hora + "}\"];\n"
+		//graphipila1 += "N" + str + "->N" + str + ";\n"
+		for p.size2 != 0 {
+			graphipila1 += "N" + strconv.Itoa(e) + "->N" + strconv.Itoa(e+1) + ";\n"
+			e += 1
+		}
+
+		p.size2 -= 1
+		temp = temp.sig
+	}
+
+	graphipila1 += "}"
+	fmt.Println(graphipila1)
+
+}
 
 */
 

@@ -1,0 +1,12 @@
+digraph G {
+rankdir=TB;
+node [shape=box];
+node [shape=record fontname=Arial]
+label = "COLA DE ESTUDIANTES EN ESPERA";
+N3[label="{mangera|gato|202115803}"];
+N3->N2;
+N2[label="{marcelino|melara|202828164}"];
+N2->N1;
+N1[label="{marcelino|para|202828164}"];
+N1->N0;
+}

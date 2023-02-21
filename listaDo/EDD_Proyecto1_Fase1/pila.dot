@@ -1,0 +1,14 @@
+digraph G {
+rankdir=BT;
+node [shape=box];
+node [shape=record fontname=Arial]
+label = "PILA DE ESTUDIANTES ACEPTADOS O RECHAZADOS";
+N-1659074[label="{20/02/2023      19:41     |se acepto a el estudiante}"];
+N1->N2;
+N-1659075[label="{20/02/2023      19:41     |se acepto a el estudiante}"];
+N2->N3;
+N-1659076[label="{20/02/2023      19:41     |se acepto a el estudiante}"];
+N3->N4;
+N-1659077[label="{20/02/2023      19:40     |se acepto a el estudiante}"];
+N4->N5;
+}
