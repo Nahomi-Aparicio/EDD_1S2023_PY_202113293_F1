@@ -61,7 +61,7 @@ func (c *Cola) Vacia() bool {
 
 func (c *Cola) Graph1() {
 	var graphipila1 string
-	c.size += 1
+
 	var e int
 	e = c.size
 
@@ -75,8 +75,8 @@ func (c *Cola) Graph1() {
 	graphipila1 += "node [shape=record fontname=Arial]\n"
 	graphipila1 += "label = \"COLA DE ESTUDIANTES EN ESPERA\";\n"
 	for temp != nil {
-		graphipila1 += "N" + strconv.Itoa(c.size) + "[label=\"{" + temp.Estudiante.Nombre + "|" + temp.Estudiante.Apellido + "|" + temp.Estudiante.Carnet + "}\"];\n"
-		graphipila1 += "N" + strconv.Itoa(c.size) + "->" + "N" + strconv.Itoa(c.size-1) + ";\n"
+		graphipila1 += "N" + strconv.Itoa(c.size+1) + "[label=\"{" + temp.Estudiante.Nombre + "|" + temp.Estudiante.Apellido + "|" + temp.Estudiante.Carnet + "}\"];\n"
+		graphipila1 += "N" + strconv.Itoa(c.size+1) + "->" + "N" + strconv.Itoa(c.size) + ";\n"
 		temp = temp.Siguiente
 		c.size -= 1
 

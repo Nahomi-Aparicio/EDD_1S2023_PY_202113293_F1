@@ -163,9 +163,7 @@ func Cargamasiva(colita *colita.Cola) {
 		words := strings.Split(strings.TrimSpace(row[1]), " ")
 
 		colita.Agregar(row[0], words[0], words[1], row[2])
-
 	}
-
 }
 
 //func registro() {
