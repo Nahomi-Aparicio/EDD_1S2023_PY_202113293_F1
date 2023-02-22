@@ -4,10 +4,13 @@ import (
 	"fmt"
 	"sort"
 	"strconv"
+
+	"proyecto.com/proyecti/PilaDoble"
 )
 
 type DoublyList struct {
 	head *NodoAD
+	pila *PilaDoble.PilaDob
 	tail *NodoAD
 }
 
@@ -53,21 +56,6 @@ func (l *DoublyList) BuscaryagregarHora(carnet string, hora string) {
 
 	}
 }
-
-/*func (l *DoublyList) Ordenar() {
-	aux := l.head
-	for aux != nil {
-		for aux.sigue != nil {
-			if aux.Estudiante.Carnet < aux.sigue.Estudiante.Carnet {
-				fmt.Println("este es el primer carnet: ", aux.Estudiante.Carnet)
-				fmt.Println("este es el segundo carnet: ", aux.sigue.Estudiante.Carnet)
-				aux.Estudiante, aux.sigue.Estudiante = aux.sigue.Estudiante, aux.Estudiante
-			}
-
-			aux = aux.sigue
-		}
-	}
-}*/
 
 func (l *DoublyList) Gurdarcarnet() {
 	lista := []interface{}{}
@@ -124,14 +112,13 @@ func (regEst *DoublyList) OrdenarPorCarnet() {
 		cambiado = false
 		actual := regEst.head
 		for actual.sigue != nil {
-			if actual.Carnet < actual.sigue.Carnet {
-				fmt.Println("este es el primer carnet: ", actual.Carnet)
-				fmt.Println("este es el segundo carnet: ", actual.sigue.Carnet)
-				fmt.Println("═════════════════════════════════════════")
+			if actual.Carnet > actual.sigue.Carnet {
+
 				actual.Carnet, actual.sigue.Carnet = actual.sigue.Carnet, actual.Carnet
-				fmt.Println("este es el primer carsnet: ", actual.Carnet)
-				fmt.Println("este es el segundo casrnet: ", actual.sigue.Carnet)
-				fmt.Println("═════════════════════════════════════════")
+				actual.Nombre, actual.sigue.Nombre = actual.sigue.Nombre, actual.Nombre
+				actual.Apellido, actual.sigue.Apellido = actual.sigue.Apellido, actual.Apellido
+				actual.Contraseña, actual.sigue.Contraseña = actual.sigue.Contraseña, actual.Contraseña
+
 				cambiado = true
 			}
 			actual = actual.sigue

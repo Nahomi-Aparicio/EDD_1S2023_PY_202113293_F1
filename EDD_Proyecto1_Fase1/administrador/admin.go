@@ -92,7 +92,7 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA, lis *listaDo.DoublyList) {
 					fmt.Println("❤                 NO HAY ESTUDIANTES PENDIENTES               ❤")
 					fmt.Println("")
 				}
-				pila.Print()
+				//pila.Print()
 
 				//lis.BuscaryagregarHora("201780044", t)
 
@@ -103,9 +103,9 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA, lis *listaDo.DoublyList) {
 		case 2:
 			fmt.Println("═══════════════════════ ADMINISTRADOR - ESTUDIANTES EN EL SISTEMA ══════════════════════ ")
 			//lis.Imprimir()
-			//lis.OrdenarPorCarnet()
-			lis.Gurdarcarnet()
-
+			lis.OrdenarPorCarnet()
+			//lis.Gurdarcarnet()
+			lis.Imprimir()
 		case 3:
 
 			fmt.Println("═══════════════════════ ADMINISTRADOR - registro de estudiantes ══════════════════════ ")

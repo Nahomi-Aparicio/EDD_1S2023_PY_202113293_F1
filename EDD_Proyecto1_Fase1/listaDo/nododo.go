@@ -3,13 +3,13 @@ package listaDo
 import (
 	"fmt"
 
-	"proyecto.com/proyecti/pilaDoble"
+	"proyecto.com/proyecti/PilaDoble"
 )
 
 type NodoAD struct {
 	sigue      *NodoAD
 	anteior    *NodoAD
-	pilaD      *pilaDoble.PilaDob
+	pilaD      *PilaDoble.PilaDob
 	Carnet     int
 	Nombre     string
 	Apellido   string

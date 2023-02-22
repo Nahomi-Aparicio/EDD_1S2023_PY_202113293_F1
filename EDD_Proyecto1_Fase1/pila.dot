@@ -3,14 +3,20 @@ rankdir=BT;
 node [shape=box];
 node [shape=record fontname=Arial]
 label = "PILA DE ACCIONES DEL ADMIN";
-N5[label="{22/02/2023      01:31     |se rechazo a el estudiante|Lourdes201902259}"];
+N8[label="{22/02/2023      10:45     |se acepto a el estudiante|Kevyn201700653}"];
 N1->N2;
-N4[label="{22/02/2023      01:31     |se rechazo a el estudiante|Ebany201403877}"];
+N7[label="{22/02/2023      10:45     |se rechazo a el estudiante|Jonatan201900570}"];
 N2->N3;
-N3[label="{22/02/2023      01:31     |se acepto a el estudiante|Leonardo201780044}"];
+N6[label="{22/02/2023      10:45     |se rechazo a el estudiante|Alejandro201903549}"];
 N3->N4;
-N2[label="{22/02/2023      01:31     |se acepto a el estudiante|Cristian201700918}"];
+N5[label="{22/02/2023      10:45     |se acepto a el estudiante|Lourdes201902259}"];
 N4->N5;
-N1[label="{22/02/2023      01:31     |EL ADMINISTRADOR INGRESO AL SISTEMA|ADMINISTRADOR1}"];
+N4[label="{22/02/2023      10:45     |se acepto a el estudiante|Ebany201403877}"];
 N5->N6;
+N3[label="{22/02/2023      10:45     |se rechazo a el estudiante|Leonardo201780044}"];
+N6->N7;
+N2[label="{22/02/2023      10:45     |se acepto a el estudiante|Cristian201700918}"];
+N7->N8;
+N1[label="{22/02/2023      10:45     |EL ADMINISTRADOR INGRESO AL SISTEMA|ADMINISTRADOR1}"];
+N8->N9;
 }

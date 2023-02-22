@@ -1,4 +1,4 @@
-package pilaDoble
+package PilaDoble
 
 import "fmt"
 
