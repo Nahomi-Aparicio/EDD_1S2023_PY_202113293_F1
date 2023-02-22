@@ -93,13 +93,16 @@ func (c *Cola) Graph1() {
 	file.WriteString(graphipila1)
 	file.Close()
 	//creamos la imagen
+
+}
+
+func (c *Cola) RepoCol() {
 	cmd := exec.Command("dot", "-Tpng", "cola.dot", "-o", "cola.png")
 	arr := cmd.Run()
 	if arr != nil {
 		fmt.Println("Error al crear la imagen")
 		return
 	}
-
 }
 
 /*func (c *Cola) Graph() {

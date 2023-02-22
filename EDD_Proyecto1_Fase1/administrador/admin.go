@@ -23,14 +23,15 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA, lis *listaDo.DoublyList) {
 	validar := 0
 	var nom, cont, Ap string
 	var car int
-	for opcion != 5 {
+	for opcion != 6 {
 
 		fmt.Println("═══════════════════════ ADMINISTRADOR - EDD GODRIVE ══════════════════════ ")
 		fmt.Println("❤                   1. VER ESTUDIANTES PENDIENTES                        ❤")
 		fmt.Println("❤                   2. VER ESTUDIANTES DEL SISTEMA                       ❤")
 		fmt.Println("❤                   3. REGISTRAR NUEVOS ESTUDIANTES                      ❤")
 		fmt.Println("❤                   4. CARGA MASIVA DE ESTUDIANTES                       ❤")
-		fmt.Println("❤                   5. CERRAR SESION                                     ❤")
+		fmt.Println("❤                   5. VER REPORTE DE ESTUDIANTES                        ❤")
+		fmt.Println("❤                   6. CERRAR SESION                                     ❤")
 		fmt.Println("═══════════════════════════════════════════════════════════════════════════ ")
 
 		fmt.Println("Ingrese una opcion:   ")
@@ -66,7 +67,7 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA, lis *listaDo.DoublyList) {
 
 						fmt.Println("SE ACEPTO AL ESTUDIANTE")
 						fmt.Println("")
-						pila.Push(t, "se acepto a el estudiante")
+						pila.Push(t, "se acepto a el estudiante", temp.Carnet, temp.Nombre)
 						lis.Añadir(temp.Carnet, temp.Nombre, temp.Apellido, temp.Contraseña)
 
 					case 2:
@@ -75,7 +76,7 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA, lis *listaDo.DoublyList) {
 
 						fmt.Println("SE RECHAZO AL ESTUDIANTE")
 						fmt.Println("")
-						pila.Push(t, "se rechazo a el estudiante")
+						pila.Push(t, "se rechazo a el estudiante", temp.Carnet, temp.Nombre)
 					case 3:
 						fmt.Println("Regresando al menu principal")
 						fmt.Println("")
@@ -98,7 +99,6 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA, lis *listaDo.DoublyList) {
 				//
 
 			}
-			pila.Graph()
 
 		case 2:
 			fmt.Println("═══════════════════════ ADMINISTRADOR - ESTUDIANTES EN EL SISTEMA ══════════════════════ ")
@@ -129,6 +129,10 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA, lis *listaDo.DoublyList) {
 			Cargamasiva(colita)
 
 		case 5:
+			colita.RepoCol()
+			pila.Graph()
+
+		case 6:
 			fmt.Println("Cerrando sesion")
 			fmt.Println("")
 			return

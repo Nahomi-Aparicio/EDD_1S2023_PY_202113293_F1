@@ -35,6 +35,7 @@ func (l *DoublyList) Imprimir() {
 }
 
 func (l *DoublyList) BuscaryagregarHora(carnet string, hora string) {
+	fmt.Println(carnet, hora)
 	num, err := strconv.Atoi(carnet)
 	if err != nil {
 		fmt.Println("")
@@ -43,7 +44,6 @@ func (l *DoublyList) BuscaryagregarHora(carnet string, hora string) {
 	aux := l.head
 	for aux != nil {
 		if aux.Carnet == num {
-			aux.pilaD.AgregarP(carnet, hora)
 
 			fmt.Println("                      ❤ BIEVENIDO AL SISTEMA ❤                          ")
 			fmt.Println("")

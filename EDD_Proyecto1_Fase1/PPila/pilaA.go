@@ -12,9 +12,9 @@ type PilaA struct {
 	size2 int
 }
 
-func (p *PilaA) Push(estado string, hora string) {
+func (p *PilaA) Push(estado string, hora string, carnet int, nombre string) {
 
-	nuevono := &NodoPi{estado, hora, nil}
+	nuevono := &NodoPi{estado, hora, carnet, nombre, nil}
 	if p.head == nil {
 		p.head = nuevono
 	} else {
@@ -49,10 +49,10 @@ func (p *PilaA) Graph() {
 	graphipila1 += "rankdir=BT;\n"
 	graphipila1 += "node [shape=box];\n"
 	graphipila1 += "node [shape=record fontname=Arial]\n"
-	graphipila1 += "label = \"PILA DE ESTUDIANTES ACEPTADOS O RECHAZADOS\";\n"
+	graphipila1 += "label = \"PILA DE ACCIONES DEL ADMIN\";\n"
 	for temp != nil {
 
-		graphipila1 += "N" + strconv.Itoa(p.size2) + "[label=\"{" + temp.Estado + "|" + temp.hora + "}\"];\n"
+		graphipila1 += "N" + strconv.Itoa(p.size2) + "[label=\"{" + temp.Estado + "|" + temp.hora + "|" + temp.nombre + strconv.Itoa(temp.carnet) + "}\"];\n"
 		graphipila1 += "N" + strconv.Itoa(e) + "->N" + strconv.Itoa(e+1) + ";\n"
 		e += 1
 
