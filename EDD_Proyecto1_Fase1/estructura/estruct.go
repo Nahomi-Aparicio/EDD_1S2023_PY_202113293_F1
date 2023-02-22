@@ -5,7 +5,7 @@ import (
 )
 
 type Estudiante struct {
-	Carnet     string
+	Carnet     int
 	Nombre     string
 	Apellido   string
 	Contraseña string

@@ -3,16 +3,16 @@ rankdir=BT;
 node [shape=box];
 node [shape=record fontname=Arial]
 label = "PILA DE ESTUDIANTES ACEPTADOS O RECHAZADOS";
-N6[label="{21/02/2023      09:29     |se rechazo a el estudiante}"];
+N6[label="{21/02/2023      22:36     |se acepto a el estudiante}"];
 N1->N2;
-N5[label="{21/02/2023      09:29     |se acepto a el estudiante}"];
+N5[label="{21/02/2023      22:36     |se acepto a el estudiante}"];
 N2->N3;
-N4[label="{21/02/2023      09:29     |se rechazo a el estudiante}"];
+N4[label="{21/02/2023      22:36     |se acepto a el estudiante}"];
 N3->N4;
-N3[label="{21/02/2023      09:29     |se acepto a el estudiante}"];
+N3[label="{21/02/2023      22:36     |se acepto a el estudiante}"];
 N4->N5;
-N2[label="{21/02/2023      09:29     |se rechazo a el estudiante}"];
+N2[label="{21/02/2023      22:36     |se acepto a el estudiante}"];
 N5->N6;
-N1[label="{21/02/2023      09:29     |se acepto a el estudiante}"];
+N1[label="{21/02/2023      22:36     |se acepto a el estudiante}"];
 N6->N7;
 }

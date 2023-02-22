@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"strconv"
 	"strings"
 	"time"
 
@@ -13,18 +14,19 @@ import (
 
 	"proyecto.com/proyecti/PPila"
 	"proyecto.com/proyecti/colita"
+	"proyecto.com/proyecti/listaDo"
 )
 
-func Menuadmi(colita *colita.Cola, pila *PPila.PilaA) {
+func Menuadmi(colita *colita.Cola, pila *PPila.PilaA, lis *listaDo.DoublyList) {
 
 	var opcion int
 	validar := 0
 	var nom, cont, Ap string
-	var car string
+	var car int
 	for opcion != 5 {
 
 		fmt.Println("═══════════════════════ ADMINISTRADOR - EDD GODRIVE ══════════════════════ ")
-		fmt.Println("❤                   1. VER ESTUDIANTES ELIMINANDO                        ❤")
+		fmt.Println("❤                   1. VER ESTUDIANTES PENDIENTES                        ❤")
 		fmt.Println("❤                   2. VER ESTUDIANTES DEL SISTEMA                       ❤")
 		fmt.Println("❤                   3. REGISTRAR NUEVOS ESTUDIANTES                      ❤")
 		fmt.Println("❤                   4. CARGA MASIVA DE ESTUDIANTES                       ❤")
@@ -47,7 +49,7 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA) {
 					colita.Graph1()
 					fmt.Println("═══════════════════════ ESTUDIANTES PENDIENTES ═════════", size+1, "═════════")
 
-					fmt.Printf("Carnet: %s\n", temp.Carnet)
+					fmt.Printf("Carnet: %2d\n", temp.Carnet)
 					fmt.Printf("Nombre: %s\n", temp.Nombre)
 					fmt.Println(" ═══════════════════════ ELIJA UNA OPCION PARA EL ESTUDIANTE ══════════════════════ ")
 					fmt.Println("❤                   1. ACEPTAR                                                    ❤")
@@ -65,6 +67,7 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA) {
 						fmt.Println("SE ACEPTO AL ESTUDIANTE")
 						fmt.Println("")
 						pila.Push(t, "se acepto a el estudiante")
+						lis.Añadir(temp.Carnet, temp.Nombre, temp.Apellido, temp.Contraseña)
 
 					case 2:
 						date := time.Now()
@@ -90,12 +93,18 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA) {
 				}
 				pila.Print()
 
+				//lis.BuscaryagregarHora("201780044", t)
+
+				//
+
 			}
 			pila.Graph()
 
 		case 2:
-			fmt.Println("Estudiantes del sistema")
-			fmt.Println("")
+			fmt.Println("═══════════════════════ ADMINISTRADOR - ESTUDIANTES EN EL SISTEMA ══════════════════════ ")
+			//lis.Imprimir()
+			//lis.OrdenarPorCarnet()
+			lis.Gurdarcarnet()
 
 		case 3:
 
@@ -161,8 +170,13 @@ func Cargamasiva(colita *colita.Cola) {
 			return
 		}
 		words := strings.Split(strings.TrimSpace(row[1]), " ")
+		num, err := strconv.Atoi(row[0])
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
 
-		colita.Agregar(row[0], words[0], words[1], row[2])
+		colita.Agregar(num, words[0], words[1], row[2])
 	}
 }
 
