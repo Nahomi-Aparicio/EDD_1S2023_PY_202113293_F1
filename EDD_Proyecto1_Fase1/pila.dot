@@ -3,14 +3,12 @@ rankdir=BT;
 node [shape=box];
 node [shape=record fontname=Arial]
 label = "PILA DE ACCIONES DEL ADMIN";
-N5[label="{23/02/2023      07:55     |se acepto a el estudiante|Lourdes201902259}"];
+N4[label="{23/02/2023      09:30     |se acepto a el estudiante|Ebany201403877}"];
 N1->N2;
-N4[label="{23/02/2023      07:55     |se acepto a el estudiante|Ebany201403877}"];
+N3[label="{23/02/2023      09:30     |se acepto a el estudiante|Leonardo201780044}"];
 N2->N3;
-N3[label="{23/02/2023      07:55     |se acepto a el estudiante|Leonardo201780044}"];
+N2[label="{23/02/2023      09:30     |se acepto a el estudiante|Cristian201700918}"];
 N3->N4;
-N2[label="{23/02/2023      07:55     |se acepto a el estudiante|Cristian201700918}"];
+N1[label="{23/02/2023      09:30     |EL ADMINISTRADOR INGRESO AL SISTEMA|ADMINISTRADOR0}"];
 N4->N5;
-N1[label="{23/02/2023      07:55     |EL ADMINISTRADOR INGRESO AL SISTEMA|ADMINISTRADOR0}"];
-N5->N6;
 }

@@ -22,16 +22,6 @@ func (p *PilaDob) AgregarP(secion string, hora string, carne int) {
 
 }
 
-func (p *PilaDob) d(num int, grap string) {
-	aux := p.cabeza
-	for aux != nil {
-		for aux != nil {
-			aux.MostarPilaDo()
-			aux = aux.sig
-		}
-	}
-}
-
 func (p *PilaDob) graficar(num int, grap string) {
 	aux := p.cabeza
 	for aux != nil {
@@ -39,6 +29,14 @@ func (p *PilaDob) graficar(num int, grap string) {
 			grap += aux.hora
 
 		}
+		aux = aux.sig
+	}
+}
+
+func (p *PilaDob) MostrarPilaDo() {
+	aux := p.cabeza
+	for aux != nil {
+		aux.MostarPilaDo()
 		aux = aux.sig
 	}
 }
