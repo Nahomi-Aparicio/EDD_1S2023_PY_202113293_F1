@@ -1,0 +1,18 @@
+digraph G {
+rankdir=LR;
+node [shape=box];
+node [shape=record fontname=Arial]
+label = "BITACORA DE ESTUDIANTES";
+N4[label="{Ebany Larios 201403877}"];
+N1 -> N0;
+N0 -> N1;
+N3[label="{Cristian Suy 201700918}"];
+N2 -> N1;
+N1 -> N2;
+N2[label="{Leonardo Martinez 201780044}"];
+N3 -> N2;
+N2 -> N3;
+N1[label="{Lourdes Reyes 201902259}"];
+N4 -> N3;
+N3 -> N4;
+}

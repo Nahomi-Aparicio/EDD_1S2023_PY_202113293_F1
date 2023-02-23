@@ -1,22 +1,27 @@
 package listaDo
 
 import (
+	"encoding/json"
 	"fmt"
-	"sort"
+	"io/ioutil"
+	"os"
+	"os/exec"
 	"strconv"
+	"strings"
+	"time"
 
 	"proyecto.com/proyecti/PilaDoble"
 )
 
 type DoublyList struct {
 	head *NodoAD
-	pila *PilaDoble.PilaDob
 	tail *NodoAD
+	size int
 }
 
 func (l *DoublyList) Añadir(carnet int, nombre string, Apellido string, contraseña string) {
 
-	nuevonodo := &NodoAD{Carnet: carnet, Nombre: nombre, Apellido: Apellido, Contraseña: contraseña, pilaD: nil, sigue: nil, anteior: nil}
+	nuevonodo := &NodoAD{Carnet: carnet, Nombre: nombre, Apellido: Apellido, Contraseña: contraseña, pilaD: &PilaDoble.PilaDob{}, sigue: nil, anteior: nil}
 	if l.head == nil {
 		l.head = nuevonodo
 		l.tail = nuevonodo
@@ -24,6 +29,8 @@ func (l *DoublyList) Añadir(carnet int, nombre string, Apellido string, contras
 		l.tail.sigue = nuevonodo
 		nuevonodo.anteior = l.tail
 		l.tail = nuevonodo
+		l.size += 1
+
 	}
 	fmt.Println("Se agrego el estudiante a la lista")
 }
@@ -38,69 +45,32 @@ func (l *DoublyList) Imprimir() {
 }
 
 func (l *DoublyList) BuscaryagregarHora(carnet string, hora string) {
-	fmt.Println(carnet, hora)
+
 	num, err := strconv.Atoi(carnet)
 	if err != nil {
 		fmt.Println("")
 
 	}
+
 	aux := l.head
 	for aux != nil {
+
 		if aux.Carnet == num {
+			date := time.Now()
+			t := fmt.Sprintf("%02d/%02d/%02d      %02d:%02d     ", date.Day(), date.Month(), date.Year(), date.Hour(), date.Minute())
+
+			fmt.Println("                          ❤ ESTUDIANTE:  " + carnet + "  ❤                          ")
 
 			fmt.Println("                      ❤ BIEVENIDO AL SISTEMA ❤                          ")
+			fmt.Println("")
+			aux.pilaD.AgregarP("se inicio secion", t, num)
+
 			fmt.Println("")
 
 		}
 		aux = aux.sigue
 
 	}
-}
-
-func (l *DoublyList) Gurdarcarnet() {
-	lista := []interface{}{}
-	lista2 := [][]interface{}{}
-	//lista := make([][][]string, 0)
-	aux := l.head
-	for aux != nil {
-
-		lista = append(lista, aux.Carnet)
-		lista = append(lista, aux.Nombre)
-		lista = append(lista, aux.Apellido)
-
-		lista2 = append(lista2, lista)
-
-		aux = aux.sigue
-		lista = []interface{}{}
-	}
-
-	sort.Slice(lista2, func(i, j int) bool {
-		return lista2[i][0].(int) < lista2[j][0].(int)
-	})
-
-	// Imprimir la lista resultante
-	//fmt.Println(lista2)
-
-	for _, fila := range lista2 {
-		// Imprimir cada elemento de la fila separado por un espacio
-		fmt.Println("═════════════════════════════════════════")
-		for i, elemento := range fila {
-
-			if i == 0 {
-
-				fmt.Print(elemento)
-
-			} else {
-
-				fmt.Print(" " + elemento.(string))
-
-			}
-
-		}
-
-		fmt.Println()
-	}
-
 }
 
 func (regEst *DoublyList) OrdenarPorCarnet() {
@@ -125,4 +95,93 @@ func (regEst *DoublyList) OrdenarPorCarnet() {
 		}
 
 	}
+}
+
+type Estudiante struct {
+	Carne        string `json:"Carne"`
+	Nombre       string `json:"Nombre"`
+	Contraseña   string `json:"Contraseña"`
+	Carpeta_raiz string `json:"Carpeta_raiz"`
+}
+type listaE struct {
+	Lista []Estudiante `json:"ALUMNOS"`
+}
+
+func (P *DoublyList) CrearJon() {
+	lisi := []string{}
+	var str string
+	aux := P.head
+
+	for aux != nil {
+		str += aux.Nombre + "," + strconv.Itoa(aux.Carnet) + "," + aux.Contraseña + "," + "/"
+		lisi = append(lisi, str)
+		aux = aux.sigue
+		str = ""
+	}
+	lista1 := listaE{}
+	for _, v := range lisi {
+		campo := strings.Split(v, ",")
+		estudiante := Estudiante{
+			Carne:        campo[1],
+			Nombre:       campo[0],
+			Contraseña:   campo[2],
+			Carpeta_raiz: campo[3],
+		}
+		lista1.Lista = append(lista1.Lista, estudiante)
+	}
+
+	jsonData, err := json.Marshal(lista1)
+	if err != nil {
+		fmt.Println(err)
+	}
+	err = ioutil.WriteFile("lista_estudiantes.json", jsonData, 0644)
+	if err != nil {
+		fmt.Println("Error al escribir el archivo:", err)
+		return
+	}
+}
+
+func (L *DoublyList) Graficar() {
+	L.size += 1
+	var graphipila1 string
+
+	temp := L.head
+
+	e := 1
+	graphipila1 = "digraph G {\n"
+	graphipila1 += "rankdir=LR;\n"
+	graphipila1 += "node [shape=box];\n"
+	graphipila1 += "node [shape=record fontname=Arial]\n"
+	graphipila1 += "label = \"BITACORA DE ESTUDIANTES\";\n"
+	for temp != nil {
+		graphipila1 += "N" + strconv.Itoa(L.size) + "[label=\"{" + temp.Nombre + " " + temp.Apellido + " " + strconv.Itoa(temp.Carnet) + "}\"];\n"
+		if e != 0 {
+			graphipila1 += "N" + strconv.Itoa(e) + " -> N" + strconv.Itoa(e-1) + ";\n"
+			graphipila1 += "N" + strconv.Itoa(e-1) + " -> N" + strconv.Itoa(e) + ";\n"
+
+		}
+
+		//N1 -> N2;
+		e += 1
+		temp = temp.sigue
+		L.size -= 1
+	}
+	graphipila1 += "}"
+	//fmt.Println(graphipila1)
+
+	file, or := os.Create("lista.dot")
+	if or != nil {
+		fmt.Println("Error al crear el archivo")
+		return
+	}
+	file.WriteString(graphipila1)
+	file.Close()
+	//creamos la imagen
+	cmd := exec.Command("dot", "-Tpng", "lista.dot", "-o", "lista.png")
+	arr := cmd.Run()
+	if arr != nil {
+		fmt.Println("Error al crear la imagen")
+		return
+	}
+
 }

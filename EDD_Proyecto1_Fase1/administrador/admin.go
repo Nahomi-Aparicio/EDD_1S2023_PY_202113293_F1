@@ -102,10 +102,11 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA, lis *listaDo.DoublyList) {
 
 		case 2:
 			fmt.Println("═══════════════════════ ADMINISTRADOR - ESTUDIANTES EN EL SISTEMA ══════════════════════ ")
-			//lis.Imprimir()
+			//ordenar por carnet
 			lis.OrdenarPorCarnet()
 			//lis.Gurdarcarnet()
 			lis.Imprimir()
+
 		case 3:
 
 			fmt.Println("═══════════════════════ ADMINISTRADOR - registro de estudiantes ══════════════════════ ")
@@ -129,8 +130,14 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA, lis *listaDo.DoublyList) {
 			Cargamasiva(colita)
 
 		case 5:
+			// reporte cola
 			colita.RepoCol()
+			// reporte pila
 			pila.Graph()
+			//reporte Json
+			lis.CrearJon()
+			//reporte lista
+			lis.Graficar()
 
 		case 6:
 			fmt.Println("Cerrando sesion")

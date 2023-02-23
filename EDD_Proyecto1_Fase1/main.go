@@ -29,7 +29,7 @@ func menusecion(espera *colita.Cola, pila *PPila.PilaA, listado *listaDo.DoublyL
 		t := fmt.Sprintf("%02d/%02d/%02d      %02d:%02d     ", date.Day(), date.Month(), date.Year(), date.Hour(), date.Minute())
 
 		fmt.Println("")
-		pila.Push(t, "EL ADMINISTRADOR INGRESO AL SISTEMA", 00001, "ADMINISTRADOR")
+		pila.Push(t, "EL ADMINISTRADOR INGRESO AL SISTEMA", 0000, "ADMINISTRADOR")
 		fmt.Println("                      ❤ BIEVENIDO AL SISTEMA ❤                          ")
 		fmt.Println("")
 

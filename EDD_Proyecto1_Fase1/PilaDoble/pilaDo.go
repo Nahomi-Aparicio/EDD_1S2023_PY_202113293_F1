@@ -5,9 +5,9 @@ type PilaDob struct {
 	sizep  int
 }
 
-func (p *PilaDob) AgregarP(secion string, hora string) {
+func (p *PilaDob) AgregarP(secion string, hora string, carne int) {
 
-	nuevono := &NodoPiDo{secion, hora, nil}
+	nuevono := &NodoPiDo{secion, hora, carne, nil}
 	//fmt.Println(secion, hora)
 	if p.cabeza == nil {
 		p.cabeza = nuevono
@@ -17,6 +17,28 @@ func (p *PilaDob) AgregarP(secion string, hora string) {
 		p.cabeza = nuevono
 		p.cabeza.sig = temp
 		p.sizep += 1
+
 	}
 
+}
+
+func (p *PilaDob) d(num int, grap string) {
+	aux := p.cabeza
+	for aux != nil {
+		for aux != nil {
+			aux.MostarPilaDo()
+			aux = aux.sig
+		}
+	}
+}
+
+func (p *PilaDob) graficar(num int, grap string) {
+	aux := p.cabeza
+	for aux != nil {
+		if aux.carne == num {
+			grap += aux.hora
+
+		}
+		aux = aux.sig
+	}
 }
