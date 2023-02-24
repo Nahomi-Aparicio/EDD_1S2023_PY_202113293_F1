@@ -3,12 +3,20 @@ rankdir=BT;
 node [shape=box];
 node [shape=record fontname=Arial]
 label = "PILA DE ACCIONES DEL ADMIN";
-N4[label="{23/02/2023      09:30     |se acepto a el estudiante|Ebany201403877}"];
-N1->N2;
-N3[label="{23/02/2023      09:30     |se acepto a el estudiante|Leonardo201780044}"];
-N2->N3;
-N2[label="{23/02/2023      09:30     |se acepto a el estudiante|Cristian201700918}"];
-N3->N4;
-N1[label="{23/02/2023      09:30     |EL ADMINISTRADOR INGRESO AL SISTEMA|ADMINISTRADOR0}"];
-N4->N5;
+N121334234[label="{23/02/2023      18:17     |se acepto a el estudiante|aaa121334234}"];
+N12112134->N121334234;
+N12112134[label="{23/02/2023      18:12     |se acepto a el estudiante|maria12112134}"];
+N201700653->N12112134;
+N201700653[label="{23/02/2023      18:12     |se acepto a el estudiante|Kevyn201700653}"];
+N201900570->N201700653;
+N201900570[label="{23/02/2023      18:12     |se acepto a el estudiante|Jonatan201900570}"];
+N201903549->N201900570;
+N201903549[label="{23/02/2023      18:12     |se acepto a el estudiante|Alejandro201903549}"];
+N201902259->N201903549;
+N201902259[label="{23/02/2023      18:12     |se acepto a el estudiante|Lourdes201902259}"];
+N201403877->N201902259;
+N201403877[label="{23/02/2023      18:12     |se acepto a el estudiante|Ebany201403877}"];
+N201780044->N201403877;
+N201780044[label="{23/02/2023      18:12     |se acepto a el estudiante|Leonardo201780044}"];
+N201700918->N201780044;
 }

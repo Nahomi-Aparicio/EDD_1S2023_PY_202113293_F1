@@ -1,15 +1,36 @@
 digraph G {
 rankdir=LR;
 node [shape=box];
-node [shape=record fontname=Arial]
 label = "BITACORA DE ESTUDIANTES";
-N3[label="{Ebany Larios 201403877}"];
-N1 -> N0;
-N0 -> N1;
-N2[label="{Cristian Suy 201700918}"];
-N2 -> N1;
-N1 -> N2;
-N1[label="{Leonardo Martinez 201780044}"];
-N3 -> N2;
-N2 -> N3;
+12112134[label="{maria cana 12112134}"];
+12112134 -> 121334234;
+121334234 -> 12112134;
+{ rank=same 
+ 12112135[label="{23/02/2023      18:13      se inicio secion}"];
+12112134 -> 12112135;
+}{ rank=same 
+ 12112136[label="{23/02/2023      18:13      se inicio secion}"];
+12112135 -> 12112136;
+}121334234[label="{aaa pan 121334234}"];
+121334234 -> 201403877;
+201403877 -> 121334234;
+201403877[label="{Ebany Larios 201403877}"];
+201403877 -> 201700653;
+201700653 -> 201403877;
+201700653[label="{Kevyn Gir�n 201700653}"];
+201700653 -> 201700918;
+201700918 -> 201700653;
+201700918[label="{Cristian Suy 201700918}"];
+201700918 -> 201780044;
+201780044 -> 201700918;
+201780044[label="{Leonardo Martinez 201780044}"];
+201780044 -> 201900570;
+201900570 -> 201780044;
+201900570[label="{Jonatan Gonzalez 201900570}"];
+201900570 -> 201902259;
+201902259 -> 201900570;
+201902259[label="{Lourdes Reyes 201902259}"];
+201902259 -> 201903549;
+201903549 -> 201902259;
+201903549[label="{Alejandro Caballeros 201903549}"];
 }

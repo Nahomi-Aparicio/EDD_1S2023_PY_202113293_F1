@@ -65,10 +65,13 @@ func Menuadmi(colita *colita.Cola, pila *PPila.PilaA, lis *listaDo.DoublyList) {
 						date := time.Now()
 						t := fmt.Sprintf("%02d/%02d/%02d      %02d:%02d     ", date.Day(), date.Month(), date.Year(), date.Hour(), date.Minute())
 
-						fmt.Println("SE ACEPTO AL ESTUDIANTE")
 						fmt.Println("")
-						pila.Push(t, "se acepto a el estudiante", temp.Carnet, temp.Nombre)
-						lis.Añadir(temp.Carnet, temp.Nombre, temp.Apellido, temp.Contraseña)
+
+						if pila.VerificarCar(temp.Carnet) == false {
+							fmt.Println("SE ACEPTO AL ESTUDIANTE")
+							pila.Push(t, "se acepto a el estudiante", temp.Carnet, temp.Nombre)
+							lis.Añadir(temp.Carnet, temp.Nombre, temp.Apellido, temp.Contraseña)
+						}
 
 					case 2:
 						date := time.Now()

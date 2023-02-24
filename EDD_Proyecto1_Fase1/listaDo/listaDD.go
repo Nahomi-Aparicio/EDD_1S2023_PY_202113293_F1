@@ -32,7 +32,7 @@ func (l *DoublyList) Añadir(carnet int, nombre string, Apellido string, contras
 		l.size += 1
 
 	}
-	fmt.Println("Se agrego el estudiante a la lista")
+
 }
 
 func (l *DoublyList) Imprimir() {
@@ -64,7 +64,7 @@ func (l *DoublyList) BuscaryagregarHora(carnet string, hora string) {
 			fmt.Println("                      ❤ BIEVENIDO AL SISTEMA ❤                          ")
 			fmt.Println("")
 			aux.pilaD.AgregarP("se inicio secion", t, num)
-
+			aux.pilaD.ImprimirPila()
 			fmt.Println("")
 
 		}
@@ -147,27 +147,28 @@ func (L *DoublyList) Graficar() {
 
 	temp := L.head
 
-	e := 1
+	//e := 1
 	graphipila1 = "digraph G {\n"
 	graphipila1 += "rankdir=LR;\n"
 	graphipila1 += "node [shape=box];\n"
-	graphipila1 += "node [shape=record fontname=Arial]\n"
+
 	graphipila1 += "label = \"BITACORA DE ESTUDIANTES\";\n"
-	for temp != nil {
-		graphipila1 += "N" + strconv.Itoa(L.size) + "[label=\"{" + temp.Nombre + " " + temp.Apellido + " " + strconv.Itoa(temp.Carnet) + "}\"];\n"
-		if e != 0 {
-			graphipila1 += "N" + strconv.Itoa(e) + " -> N" + strconv.Itoa(e-1) + ";\n"
-			graphipila1 += "N" + strconv.Itoa(e-1) + " -> N" + strconv.Itoa(e) + ";\n"
+	for temp != nil && temp.sigue != nil {
+		graphipila1 += strconv.Itoa(temp.Carnet) + "[label=\"{" + temp.Nombre + " " + temp.Apellido + " " + strconv.Itoa(temp.Carnet) + "}\"];\n"
+		graphipila1 += strconv.Itoa(temp.Carnet) + " -> " + strconv.Itoa(temp.sigue.Carnet) + ";\n"
+		graphipila1 += strconv.Itoa(temp.sigue.Carnet) + " -> " + strconv.Itoa(temp.Carnet) + ";\n" //N1 -> N2;
 
-		}
+		z := temp.pilaD.GraficarPila(temp.Carnet)
+		graphipila1 += z
 
-		//N1 -> N2;
-		e += 1
 		temp = temp.sigue
-		L.size -= 1
 	}
-	graphipila1 += "}"
+	for temp != nil && temp.sigue == nil {
+		graphipila1 += strconv.Itoa(temp.Carnet) + "[label=\"{" + temp.Nombre + " " + temp.Apellido + " " + strconv.Itoa(temp.Carnet) + "}\"];\n"
+		temp = temp.sigue
+	}
 	//fmt.Println(graphipila1)
+	graphipila1 += "}"
 
 	file, or := os.Create("lista.dot")
 	if or != nil {

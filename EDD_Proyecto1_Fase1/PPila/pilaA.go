@@ -50,10 +50,10 @@ func (p *PilaA) Graph() {
 	graphipila1 += "node [shape=box];\n"
 	graphipila1 += "node [shape=record fontname=Arial]\n"
 	graphipila1 += "label = \"PILA DE ACCIONES DEL ADMIN\";\n"
-	for temp != nil {
+	for temp != nil && temp.sig != nil {
 
-		graphipila1 += "N" + strconv.Itoa(p.size2) + "[label=\"{" + temp.Estado + "|" + temp.hora + "|" + temp.nombre + strconv.Itoa(temp.carnet) + "}\"];\n"
-		graphipila1 += "N" + strconv.Itoa(e) + "->N" + strconv.Itoa(e+1) + ";\n"
+		graphipila1 += "N" + strconv.Itoa(temp.carnet) + "[label=\"{" + temp.Estado + "|" + temp.hora + "|" + temp.nombre + strconv.Itoa(temp.carnet) + "}\"];\n"
+		graphipila1 += "N" + strconv.Itoa(temp.sig.carnet) + "->N" + strconv.Itoa(temp.carnet) + ";\n"
 		e += 1
 
 		temp = temp.sig
@@ -78,4 +78,16 @@ func (p *PilaA) Graph() {
 		return
 	}
 
+}
+func (p *PilaA) VerificarCar(v int) bool {
+	temp := p.head
+	for temp != nil {
+		if temp.carnet == v {
+			fmt.Println("EL CARNE DEL ESTUDIANTE YA EXISTE")
+			return true
+
+		}
+		temp = temp.sig
+	}
+	return false
 }
