@@ -25,8 +25,6 @@ func menusecion(espera *colita.Cola, pila *PPila.PilaA, listado *listaDo.DoublyL
 
 	if usuario == "admin" && contrasena == "admin" {
 
-		fmt.Println("")
-
 		fmt.Println("                      ❤ BIEVENIDO AL SISTEMA ❤                          ")
 		fmt.Println("")
 

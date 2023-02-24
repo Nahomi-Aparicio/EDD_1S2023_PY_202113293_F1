@@ -2,18 +2,6 @@ digraph G {
 rankdir=LR;
 node [shape=box];
 label = "BITACORA DE ESTUDIANTES";
-12112134[label="{maria cana 12112134}"];
-12112134 -> 121334234;
-121334234 -> 12112134;
-{ rank=same 
- 12112135[label="{23/02/2023      18:13      se inicio secion}"];
-12112134 -> 12112135;
-}{ rank=same 
- 12112136[label="{23/02/2023      18:13      se inicio secion}"];
-12112135 -> 12112136;
-}121334234[label="{aaa pan 121334234}"];
-121334234 -> 201403877;
-201403877 -> 121334234;
 201403877[label="{Ebany Larios 201403877}"];
 201403877 -> 201700653;
 201700653 -> 201403877;

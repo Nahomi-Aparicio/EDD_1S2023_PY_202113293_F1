@@ -164,6 +164,7 @@ func (L *DoublyList) Graficar() {
 		temp = temp.sigue
 	}
 	for temp != nil && temp.sigue == nil {
+		fmt.Println("entro")
 		graphipila1 += strconv.Itoa(temp.Carnet) + "[label=\"{" + temp.Nombre + " " + temp.Apellido + " " + strconv.Itoa(temp.Carnet) + "}\"];\n"
 		temp = temp.sigue
 	}
