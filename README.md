@@ -7,4 +7,4 @@ ESTRUCTURA DE DATOS
 <div style ="text-aling:rigth"> GENESIS NAHOMI APARICIO ACAN
   202113293
   SECCION: B
-  </div
+  </div>
