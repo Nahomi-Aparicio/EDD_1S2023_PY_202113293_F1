@@ -44,11 +44,11 @@ ESTRUCTURA DE DATOS
   </p>
   </div>
 
-   ![Image text](https://github.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/tree/main/EDD_Proyecto1_Fase1/imagenesdel%20manual)
+   ![Image text]([https://github.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/tree/main/EDD_Proyecto1_Fase1/imagenesdel%20manual](https://github.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/blob/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/main.PNG))
  
  
   
-    <div style ="text-aling:center">
+ <div style ="text-aling:center">
   <p>
     <h3><b> MAIN.GO </b></h3>.
 </p>
