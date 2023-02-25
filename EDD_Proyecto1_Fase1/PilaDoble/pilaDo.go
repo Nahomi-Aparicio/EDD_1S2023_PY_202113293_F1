@@ -45,11 +45,18 @@ func (p *PilaDob) GraficarPila(num int) string {
 			grap += strconv.Itoa(aux.carne+a2) + " -> " + strconv.Itoa(aux.carne+a) + ";\n"
 			grap += "}"
 		}
+
 		a += 1
 		a2 += 1
 		aux = aux.sig
-	}
 
+	}
+	/*for aux != nil && aux.sig == nil {
+		grap += "{ rank=same \n "
+		grap += strconv.Itoa(aux.carne+a) + "[label=\"{" + aux.hora + " " + aux.secion + "}\"];\n"
+		grap += strconv.Itoa(aux.carne+a2) + " -> " + strconv.Itoa(aux.carne+a) + ";\n"
+		grap += "}"
+	}*/
 	return grap
 }
 

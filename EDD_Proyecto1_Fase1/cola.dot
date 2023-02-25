@@ -3,4 +3,6 @@ rankdir=TB;
 node [shape=box];
 node [shape=record fontname=Arial]
 label = "COLA DE ESTUDIANTES EN ESPERA";
+N1[label="{Kevyn|Gir�n|201700653}"];
+N1->N0;
 }
