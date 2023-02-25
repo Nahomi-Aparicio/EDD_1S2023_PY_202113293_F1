@@ -3,10 +3,12 @@ rankdir=BT;
 node [shape=box];
 node [shape=record fontname=Arial]
 label = "PILA DE ACCIONES DEL ADMIN";
-N201903549[label="{24/02/2023      10:07     |se acepto a el estudiante|Alejandro201903549}"];
-N201403877->N201903549;
-N201403877[label="{24/02/2023      10:07     |se acepto a el estudiante|Ebany201403877}"];
-N201780044->N201403877;
-N201780044[label="{24/02/2023      10:07     |se acepto a el estudiante|Leonardo201780044}"];
+N201700653[label="{25/02/2023      12:01     |se acepto a el estudiante|Kevyn201700653}"];
+N201900570->N201700653;
+N201900570[label="{25/02/2023      12:01     |se acepto a el estudiante|Jonatan201900570}"];
+N201903549->N201900570;
+N201903549[label="{25/02/2023      12:01     |se acepto a el estudiante|Alejandro201903549}"];
+N201780044->N201903549;
+N201780044[label="{25/02/2023      12:00     |se acepto a el estudiante|Leonardo201780044}"];
 N201700918->N201780044;
 }

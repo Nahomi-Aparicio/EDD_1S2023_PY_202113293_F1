@@ -1,13 +1,13 @@
 UNIVERSIDAD SAN CARLOS DE GUATEMALA
-FACULTAD DE INGENIERIA 
-ESCUELA DE CIENCIAS Y SISTEMAS
-ESTRUCTURA DE DATOS 
-
+<br>FACULTAD DE INGENIERIA 
+<br>ESCUELA DE CIENCIAS Y SISTEMAS
+<br>ESTRUCTURA DE DATOS 
+![Image text](https://upload.wikimedia.org/wikipedia/commons/4/4a/Usac_logo.png)
 <div style ="text-aling:rigth"> GENESIS NAHOMI APARICIO ACAN
   202113293
   SECCION: B
   </div>
-  
+   
   
 <div style ="text-aling:justify">
   <p>    
@@ -43,13 +43,13 @@ ESTRUCTURA DE DATOS
   Este archivo contiene en su interior la funcion main la cual hace que el programa comience a funcionar a la hora de iniciarlo, cuenta con dos metodos incluyendo la main. Aqui se muestra el primer menu el cual es el menu de inicio de secion 
   </p>
   </div>
-   ![Image text](https://github.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/tree/main/EDD_Proyecto1_Fase1/imagenesdel%20manual)
+
+   ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/main.PNG?token=GHSAT0AAAAAAB7AG43LTHHTHWQEFOZVGL5YY72LGRA)
+ 
+ 
   
-  </div>
     <div style ="text-aling:center">
   <p>
     <h3><b> MAIN.GO </b></h3>.
 </p>
   </div>
-
- 
