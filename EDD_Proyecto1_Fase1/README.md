@@ -44,26 +44,131 @@ UNIVERSIDAD SAN CARLOS DE GUATEMALA
   </p>
   </div>
 
-<<<<<<< HEAD
+
    ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/main.PNG?token=GHSAT0AAAAAAB7AG43LTHHTHWQEFOZVGL5YY72LGRA)
  
  
-  
-    <div style ="text-aling:center">
+<div style ="text-aling:center">
   <p>
-    <h3><b> MAIN.GO </b></h3>.
+    <h3><b> ADMIN.GO </b></h3>.
 </p>
   </div>
-=======
-   ![Image text]([https://github.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/tree/main/EDD_Proyecto1_Fase1/imagenesdel%20manual](https://github.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/blob/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/main.PNG))
+  
+  
+<div style ="text-aling:justify">
+  <p>    
+  Este archivop contiene los menus donde el administrador puede gestionar a los usuario , tiene dos metodos uno llamado Menuadmi el cual tiene como parametros la cola,la pila y la lista doble que son usadas en estre programa ademas  en este se pueden aceptar rechazar e incluir a los usuarios a sus respecxtivas pilas, de igual forma llama a los metodos de otros archivos para mostrar los usuarios registrados o para generar los respectivos reportes en "dot" , "png" y "Json".
+    </p>
+  </div>
+
+   ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/admin.PNG?token=GHSAT0AAAAAAB7AG43LMOEZ7WOEPOLFUNSYY72MEHQ)
+ 
+
+ 
+  <div style ="text-aling:justify">
+  <p>    
+ Este archivo de igual forma tiene otro metodo llamado Carga masiva el cual lee el nombre del archivo el cual se desea ingresar al sistema y separa los datos por comas y por espacios que este tenga para guardarlo en la cola de estudiantes pendientes 
+    </p>
+  </div>
  
  
+ 
+ 
+ 
+  ![Image text]( https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/carga%20masiva.PNG?token=GHSAT0AAAAAAB7AG43LAM4SL5SHAOSF3NA4Y72MESA)
+  
+  <div style ="text-aling:center">
+  <p>
+    <h3><b> ESTRUCT.GO </b></h3>.
+</p>
+  </div>
+  
+   <div style ="text-aling:justify">
+  <p>    
+Este archivo contiene la estructutura de cuales seran los datos que seran ingresados en el sistema teniendo un metodo que mostrara el carnet, el nombre , apellido y la contraseña del nuevo usuario o el usuario que ya se encuentra en el sistema
+    </p>
+  </div>
+  
+   ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/estudiantes.PNG?token=GHSAT0AAAAAAB7AG43LDRBDBFETW5NHBDMUY72MT7A)
+  
   
  <div style ="text-aling:center">
   <p>
-    <h3><b> MAIN.GO </b></h3>.
+    <h3><b> COLA.GO </b></h3>.
 </p>
   </div>
 
+   <div style ="text-aling:justify">
+  <p>    
+  Este archivo contiene 5 metodos agregar,eliminar, vacia, graph1 y repocol.
+  <br>  Agregar: en este metodo agrega los estudiantes ya sea de carga masiva o de forma manual a una cola de forma ordenada
+   <br> Eliminar: los elementos en la cola se eliminan conforme el primero en salir es el primero que entro 
+     <br> vacia: este es un metodo tipo bool el cual nos indica si la cola esta vacia o si aun existen datos en ella
+     <br> graph1 y repocol: estos metodos son usados para generar lso reportes de cola ya sea en un archivo .dot y un archivo.png
+    </p>
+  </div>
+  
+ ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/cola.PNG?token=GHSAT0AAAAAAB7AG43KDOXDDRRTAGYQKUWEY72MUQA)
  
->>>>>>> 282a02a38f0cf8568ead313ac1a91dcd2b34fd66
+ 
+ <div style ="text-aling:center">
+  <p>
+    <h3><b> PILAA.GO </b></h3>.
+</p>
+  </div>
+  
+  
+   <div style ="text-aling:justify">
+  <p>    
+Este archivo contiene los metodos Push,VerificarCar,Print,Graph:
+    <br>Push : este metodo es igual que el de agregar de cola solo que los datos se incertan al inicio del la pila no al final de esta
+    <br> Print: este metodo muestra los datos que se encuentran en la pila 
+    <br>Graph: este metodo grafica los reportes  que genera el archivo mostrando los estudiantes que fueron aceptados o rechazados conforme fueron entrando estos datos
+    <br> VerificarCar: este metodo verifica si los carnets de los nuevos usuarios registrados son repeito o no     </p>
+</div>
+  
+  
+![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/pilaA.PNG?token=GHSAT0AAAAAAB7AG43LUECFINCFMASPVRDQY72MYZA)
+
+
+<div style ="text-aling:center">
+  <p>
+    <h3><b> NODODO.GO </b></h3>.
+</p>
+  </div>
+  <div style ="text-aling:justify">
+  <p>    
+Este archivo contiene la estructutura del nodo de la lista doble en el cual tiene como apuntadores sigiente, anterior y pila al igual que contiene los 4 datos de el susuario y un metodo el cual muesta estros cuatro datos 
+    </p>
+  </div>
+  
+ ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/nododo.PNG?token=GHSAT0AAAAAAB7AG43KAE56UU5ZAX4UJCTUY72M4PQ)
+
+
+<div style ="text-aling:center">
+  <p>
+    <h3><b> LISTADD.GO </b></h3>.
+</p>
+  </div>
+  
+   <div style ="text-aling:justify">
+  <p> 
+    Este archivo contiene la lista doble el cual contiene varios metodos como el Añadir, Imprimir, BuscaryagregarHora, OrdenarPorCarnet, CrearJon y Graficar
+    <br>
+  <br> Añadir: añade los usuario segun como estos son aceptados al sistema a la lista doble
+    <br> Imprimir:muestra los usuarios en el sistema cuando el administrador quiera ver cuales son estos   
+   </p>
+</div>
+
+ ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/listaDD.PNG?token=GHSAT0AAAAAAB7AG43L7SV5BPDFKDSVAW6UY72NC4A)
+
+  <div style ="text-aling:justify">
+  <p> 
+ <br>  BuscaryagregarHora: es una verificacion el cual añade la hora y la fecha que los usuarios ingresaron al sistema y los guarda en la pila que esta como un parametro en esta lista
+  <br>  OrdenarPorCarnet:ordena los usuario segun el numero de carnet que estos poseen 
+   <br>  CrearJon:crea el JSon de reporte pormedio de algunas librerias 
+   <br>  Graficar:al igual que en pila y cola este metodo se utiliza para poder graficar los reportes de lista doble en donde muestra los usuarios en orden y la pila de cuando cada uno de estos ingresaron al sistema
+     </p>
+</div>
+
+ ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/ordenar.PNG?token=GHSAT0AAAAAAB7AG43KAMPX3YOTNA7KR6U6Y72NDEQ)
