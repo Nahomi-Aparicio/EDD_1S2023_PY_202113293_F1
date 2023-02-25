@@ -43,9 +43,10 @@ ESTRUCTURA DE DATOS
   Este archivo contiene en su interior la funcion main la cual hace que el programa comience a funcionar a la hora de iniciarlo, cuenta con dos metodos incluyendo la main. Aqui se muestra el primer menu el cual es el menu de inicio de secion 
   </p>
   </div>
+  <br>
    ![Image text](https://github.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/tree/main/EDD_Proyecto1_Fase1/imagenesdel%20manual)
+  <br>
   
-  </div>
     <div style ="text-aling:center">
   <p>
     <h3><b> MAIN.GO </b></h3>.
