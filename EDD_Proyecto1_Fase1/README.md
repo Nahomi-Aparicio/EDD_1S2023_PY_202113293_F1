@@ -108,7 +108,7 @@ Este archivo contiene la estructutura de cuales seran los datos que seran ingres
     </p>
   </div>
   
- ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/cola.PNG?token=GHSAT0AAAAAAB7AG43KDOXDDRRTAGYQKUWEY72MUQA)
+ ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/cola.PNG?token=GHSAT0AAAAAAB7AG43LFYX2XUTFRHCEVQB4Y76RUVQ)
  
  
  <div style ="text-aling:center">
@@ -142,7 +142,7 @@ Este archivo contiene la estructutura del nodo de la lista doble en el cual tien
     </p>
   </div>
   
- ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/nododo.PNG?token=GHSAT0AAAAAAB7AG43KAE56UU5ZAX4UJCTUY72M4PQ)
+ ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/nododo.PNG?token=GHSAT0AAAAAAB7AG43L2AT3PI7MG4N4DHI6Y76RVDQ)
 
 
 <div style ="text-aling:center">
