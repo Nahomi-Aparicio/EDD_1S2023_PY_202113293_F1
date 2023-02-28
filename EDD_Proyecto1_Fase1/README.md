@@ -128,7 +128,7 @@ Este archivo contiene los metodos Push,VerificarCar,Print,Graph:
 </div>
   
   
-![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/pilaA.PNG?token=GHSAT0AAAAAAB7AG43LUECFINCFMASPVRDQY72MYZA)
+![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/pilaA.PNG?token=GHSAT0AAAAAAB7AG43LAQ5UUSW4OCTUVECGY76RP3A)
 
 
 <div style ="text-aling:center">
