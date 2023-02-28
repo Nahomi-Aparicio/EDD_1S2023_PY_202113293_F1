@@ -1,7 +1,6 @@
 package PilaDoble
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -31,16 +30,13 @@ func (p *PilaDob) GraficarPila(num int) string {
 	var grap string
 	aux := p.cabeza
 	a := 1
-	e := 1
+	//e := 1
 	a2 := 0
 	for aux != nil {
 
 		if aux.carne == num {
-			if aux.carne+e == aux.carne+a {
-				fmt.Println("")
-				//
-			}
-			grap += "{ rank=same \n "
+
+			grap += "{ rank=same \n " //si le pongo el rank no jala el primero
 			grap += strconv.Itoa(aux.carne+a) + "[label=\"{" + aux.hora + " " + aux.secion + "}\"];\n"
 			grap += strconv.Itoa(aux.carne+a2) + " -> " + strconv.Itoa(aux.carne+a) + ";\n"
 			grap += "}"
@@ -51,12 +47,7 @@ func (p *PilaDob) GraficarPila(num int) string {
 		aux = aux.sig
 
 	}
-	/*for aux != nil && aux.sig == nil {
-		grap += "{ rank=same \n "
-		grap += strconv.Itoa(aux.carne+a) + "[label=\"{" + aux.hora + " " + aux.secion + "}\"];\n"
-		grap += strconv.Itoa(aux.carne+a2) + " -> " + strconv.Itoa(aux.carne+a) + ";\n"
-		grap += "}"
-	}*/
+
 	return grap
 }
 
