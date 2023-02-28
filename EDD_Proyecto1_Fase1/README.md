@@ -171,4 +171,4 @@ Este archivo contiene la estructutura del nodo de la lista doble en el cual tien
      </p>
 </div>
 
- ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/ordenar.PNG?token=GHSAT0AAAAAAB7AG43KAMPX3YOTNA7KR6U6Y72NDEQ)
+ ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/listaDD.PNG?token=GHSAT0AAAAAAB7AG43KBGNPGZRX57MFQSX2Y76RQ3A)
