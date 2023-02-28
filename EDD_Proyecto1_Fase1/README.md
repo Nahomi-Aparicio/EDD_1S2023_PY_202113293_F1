@@ -160,7 +160,7 @@ Este archivo contiene la estructutura del nodo de la lista doble en el cual tien
    </p>
 </div>
 
- ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/listaDD.PNG?token=GHSAT0AAAAAAB7AG43L7SV5BPDFKDSVAW6UY72NC4A)
+ ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/listaDD.PNG?token=GHSAT0AAAAAAB7AG43L6FAOCD2STBEQJWF4Y76RVQA)
 
   <div style ="text-aling:justify">
   <p> 
