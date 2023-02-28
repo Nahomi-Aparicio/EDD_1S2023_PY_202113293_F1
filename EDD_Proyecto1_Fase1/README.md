@@ -45,7 +45,7 @@ UNIVERSIDAD SAN CARLOS DE GUATEMALA
   </div>
 
 
-   ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/main.PNG?token=GHSAT0AAAAAAB7AG43LTHHTHWQEFOZVGL5YY72LGRA)
+   ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/main.PNG?token=GHSAT0AAAAAAB7AG43LOHR5SBINGYJXNK6MY76RTAA)
  
  
 <div style ="text-aling:center">
@@ -61,7 +61,7 @@ UNIVERSIDAD SAN CARLOS DE GUATEMALA
     </p>
   </div>
 
-   ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/admin.PNG?token=GHSAT0AAAAAAB7AG43LMOEZ7WOEPOLFUNSYY72MEHQ)
+   ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/admin.PNG?token=GHSAT0AAAAAAB7AG43LMX76EHQXLH5YY2QIY76RTKA)
  
 
  
@@ -75,7 +75,7 @@ UNIVERSIDAD SAN CARLOS DE GUATEMALA
  
  
  
-  ![Image text]( https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/carga%20masiva.PNG?token=GHSAT0AAAAAAB7AG43LAM4SL5SHAOSF3NA4Y72MESA)
+  ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/carga%20masiva.PNG?token=GHSAT0AAAAAAB7AG43LGTPSJDVPYWVXY7YWY76RTUQ)
   
   <div style ="text-aling:center">
   <p>
@@ -89,7 +89,7 @@ Este archivo contiene la estructutura de cuales seran los datos que seran ingres
     </p>
   </div>
   
-   ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/estudiantes.PNG?token=GHSAT0AAAAAAB7AG43LDRBDBFETW5NHBDMUY72MT7A)
+   ![Image text](https://raw.githubusercontent.com/Nahomi-Aparicio/EDD_1S2023_PY_202113293/main/EDD_Proyecto1_Fase1/imagenesdel%20manual/estudiantes.PNG?token=GHSAT0AAAAAAB7AG43KWNO22UQXBEIQ3DCWY76RUBA)
   
   
  <div style ="text-aling:center">
